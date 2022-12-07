@@ -13,7 +13,7 @@ function handleRequest(req, res) {
     req.on('end', () => {
         if(req.headers['content-type'] === 'application/x-www-form-urlencoded') {
             var formData = qs.parse(store);
-            res.end(JSON.stringify(formData))
+            res.end(`<h2>${formData.name}</h2><p>${formData.email}</p>`)
         }
 
         if(req.headers['content-type'] === 'application/json') {
