@@ -1,3 +1,8 @@
+var indexPath = '../client/index.js';
+
 var path = require('path');
 
-console.log(__filename);
+var absolutePath = path.join(__dirname, '..', 'client/index.js');
+
+console.log(absolutePath, indexPath);
+
